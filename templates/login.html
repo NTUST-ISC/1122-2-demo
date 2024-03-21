@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="/api/login" method="POST">
+        <div class="login">
+            <h1>login</h1>
+            <input type="text" name="account" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password"/>
+            <p>Or <a href="/signup">signup</a></p>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    
+    <style>
+        .login {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input {
+            margin-top: 10px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 2px 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="post">
+        <h1>Post ID:{{ user_id }}</h1>
+        <p>From User ID:{{ id }}</p>
+        <div style="margin-top: 10px">{{ content |safe}}</div>
+    </div>
+    <style>
+        .post {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</body>
+</html>

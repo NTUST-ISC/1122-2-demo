@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+<body>
+    <div class="new">
+        <h1>New Post</h1>
+        <form action="/api/newPost" method="POST">
+            <p>文章內容：</p>
+            <textarea name="content" 
+            cols="50"
+            rows="30"
+            placeholder="Post Content"></textarea>
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <style>
+        .new {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input,textarea {
+            margin-top: 10px;
+            padding: 3px 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 2px 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

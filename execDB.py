@@ -18,19 +18,17 @@ def main():
                     )''')
     conn.commit()
 
-
-
 def exec(command):
-    def dict_factory(cursor, row):
-        dict = {}
-        for idx, col in enumerate(cursor.description):
-            dict[col[0]] = row[idx]
-        return dict
     conn.row_factory = dict_factory
     cursor = conn.cursor()
     cursor.execute(command)
     return cursor.fetchall()
 
+def dict_factory(cursor, row):
+    dict = {}
+    for idx, col in enumerate(cursor.description):
+        dict[col[0]] = row[idx]
+    return dict
 
 if __name__ == "__main__":
     main()

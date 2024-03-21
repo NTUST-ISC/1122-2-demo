@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="posts">
+        <h1> Meow Meow board</h1>
+        <button onclick="location.href = '/newPost';">
+            New posts   
+        </button>
+        <button onclick="location.href = '/login';">
+            login 
+        </button>
+        <button onclick="location.href = '/signup';">
+            signup
+        </button>
+        <div class="list" id="list">
+            {% for post in postList %}
+                <div class="post" onclick="location.href=`/post?user_id={{ post['user_id'] }}&id={{ post['id'] }}&content={{ post['content']|safe}}`"">
+                    <p>Post ID:{{ post["id"] }} From User ID:{{ post["user_id"] }}</p>
+                    <br>
+                    <div style="margin-top: 10px">{{ post["content"]|safe}}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .posts {
+        width: 800px;
+        margin: 30px auto;
+    }
+    button {
+        padding: 2px 5px;
+    }
+    .list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .post {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    </style>
+</body>
+</html>
