@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "9029f1e1-ec92-4e79-8d29-b3f77bd377aa",
+		"name": "post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15913313"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\" : \"test02\",\r\n    \"password\" : \"testPassword\",\r\n    \"content\" : \"fuck3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://Attackme.b0925138932.repl.co/post",
+					"protocol": "https",
+					"host": [
+						"Attackme",
+						"b0925138932",
+						"repl",
+						"co"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://Attackme.b0925138932.repl.co/getPost",
+					"protocol": "https",
+					"host": [
+						"Attackme",
+						"b0925138932",
+						"repl",
+						"co"
+					],
+					"path": [
+						"getPost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

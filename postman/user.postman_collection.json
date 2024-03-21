@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "d706242e-f191-423b-a70c-1dc8b351d4c7",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15913313"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\" : \"test02\",\r\n    \"password\" : \"testPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.17.15.188:100/signup",
+					"protocol": "http",
+					"host": [
+						"10",
+						"17",
+						"15",
+						"188"
+					],
+					"port": "100",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\" : \"test01\",\r\n    \"password\" : \"testPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.17.15.188:100/login",
+					"protocol": "http",
+					"host": [
+						"10",
+						"17",
+						"15",
+						"188"
+					],
+					"port": "100",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
